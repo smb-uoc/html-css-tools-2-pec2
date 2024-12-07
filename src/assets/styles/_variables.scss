@@ -10,14 +10,14 @@ $font-bold: 700;
 
 $card-max-width: 800px;
 
-$primary-color: color(rgb 34, 34, 34);
-$secondary-color: color(rgb 57, 166, 200);
-$third-color: color(rgb 209, 194, 153);
-$hover-color: color(rgb 131, 57, 200);
+$primary-color: color(display-p3 .133 .133 .133);   // rgb(34, 34, 34)
+$secondary-color: color(display-p3 .224 .651 .784); // rgb(57, 166, 200)
+$third-color: color(display-p3 .819 .761 .6);       // rgb(209, 194, 153)
+$hover-color: color(display-p3 .514 .224 .784);     // rgb(131, 57, 200)
+$color-dark: color(display-p3 .271 .263 .263);      // rgb(69, 67, 67)
+$color-light: color(display-p3 1 1 1);              // rgb(255, 255, 255)
+$color-grey: color(display-p3 .968 .968 .968);      // rgb(247, 247, 247)
 
-$color-dark: color(rgb 69, 67, 67);
-$color-light: color(rgb 255, 255, 255);
-$color-grey: color(rgb 247, 247, 247);
 
 $mq-medium-min-width: 420px;
 $mq-large-min-width: 660px;
