@@ -1,0 +1,22 @@
+.card-container {
+  max-width: $card-max-width;
+  min-height: 250px;
+  margin: auto;
+  border-radius: .5rem;
+  @include box-shadow();
+
+  p {
+    font-size: 1.2rem;
+  }
+
+  h1 {
+    color: $color-light;
+  }
+}
+
+.img-container {
+  background-image: url("../../assets/images/vigo.jpg");
+  background-repeat: no-repeat;
+  color: $color-light;
+}
+

@@ -1,0 +1,23 @@
+.logo-link {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  color: $color-light;
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: bolder;
+  text-align: center;
+  text-decoration: none;
+
+  span {
+    padding: 0 .25rem;
+  }
+}
+
+.logo-img {
+  width: 100%;
+  max-width: 85px;
+}
