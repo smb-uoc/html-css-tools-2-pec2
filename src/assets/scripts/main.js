@@ -23,12 +23,19 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 const form = document.getElementById('registrationForm');
-const modal = new bootstrap.Modal(document.getElementById('confirmModal'));
+const modalHTML = document.getElementById('confirmModal');
+const modal = new bootstrap.Modal(modalHTML);
 
-form.addEventListener('submit', function(event) {
+form.addEventListener('submit', function (event) {
   event.preventDefault();
   if (form.checkValidity()) {
     modal.show();
+    setTimeout(function () {
+      form.submit();
+    }, 5000);
+    modalHTML.addEventListener('hidden.bs.modal', function () {
+      form.submit();
+    });
   } else {
     form.classList.add('was-validated');
   }

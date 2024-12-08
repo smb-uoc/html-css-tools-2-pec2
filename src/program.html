@@ -135,7 +135,7 @@
         <p class="text-center">Completa el siguiente formulario para registrarte en la conferencia. El precio incluye
             acceso completo a todas las actividades, materiales y certificado de asistencia.</p>
 
-        <form class="row g-3" data-netlify="true" method="POST" id="registrationForm" novalidate>
+        <form class="row g-3" data-netlify="true" method="POST" id="registrationForm" name="registrationForm" novalidate>
             <div class="col-md-6">
                 <label class="form-label" for="name">Nombre completo</label>
                 <input class="form-control" id="name" name="name" required type="text">
@@ -149,7 +149,7 @@
                 <textarea class="form-control" id="message" name="message" rows="3"></textarea>
             </div>
             <div class="col-12 text-center">
-                <button class="btn btn-primary text-light" type="submit">
+                <button class="btn btn-primary text-light" type="submit" id="submitButton">
                     Enviar inscripción
                 </button>
             </div>
