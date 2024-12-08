@@ -8,6 +8,9 @@
     "scss/at-function-named-arguments": null,
     "declaration-block-no-redundant-longhand-properties": true,
     "shorthand-property-no-redundant-values": true,
-    "color-function-notation": "modern"
+    "color-function-notation": "modern",
+    "unit-no-unknown": [true, {
+      "ignoreUnits": ["sv"]
+    }]
   }
 }
