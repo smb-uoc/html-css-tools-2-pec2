@@ -21,3 +21,15 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
+
+const form = document.getElementById('registrationForm');
+const modal = new bootstrap.Modal(document.getElementById('confirmModal'));
+
+form.addEventListener('submit', function(event) {
+  event.preventDefault();
+  if (form.checkValidity()) {
+    modal.show();
+  } else {
+    form.classList.add('was-validated');
+  }
+});
