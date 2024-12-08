@@ -1,25 +1,23 @@
 @use "sass:color";
 
-$font-family-sans-serif: -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto",
-  "Helvetica Neue", "Arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-  "Segoe UI Symbol";
-$font-family-serif: "Georgia", "Times New Roman", serif;
-$font-bold: 700;
+$min-width: 340px;
+$image-max-height: 600px;
+$image-max-width: 800px;
 
-$card-max-width: 800px;
+$bold-weight: 700;
 
-$primary-color: color(display-p3 .133 .133 .133);   // rgb(34, 34, 34)
-$secondary-color: color(display-p3 .224 .651 .784); // rgb(57, 166, 200)
-$third-color: color(display-p3 .819 .761 .6);       // rgb(209, 194, 153)
-$hover-color: color(display-p3 .514 .224 .784);     // rgb(131, 57, 200)
-$color-dark: color(display-p3 .271 .263 .263);      // rgb(69, 67, 67)
-$color-light: color(display-p3 1 1 1);              // rgb(255, 255, 255)
-$color-grey: color(display-p3 .968 .968 .968);      // rgb(247, 247, 247)
+$primary-color: color(display-p3 0 .478 1); /* #007bff */
+$second-color: color(display-p3 .974 .98 .98); /* #f8f9fa */
+$third-color: color(display-p3 .424 .463 .494); /* #6c757d */
+$hero-color: color(display-p3 0 0 0 / .6); /* rgba(0, 0, 0, .6) */
 
-$theme-colors: (
-  "primary": #fabada // pon el código de color que prefieras
-);
-
-
-$mq-medium-min-width: 420px;
-$mq-large-min-width: 660px;
+//$theme-colors: (
+//  "primary":    #007E4A,
+//  "secondary":  #FF7F00,
+//  //"success":    $success,
+//  //"info":       $info,
+//  //"warning":    $warning,
+//  //"danger":     $danger,
+//  //"light":      $light,
+//  "dark":       #FF7F00
+//);

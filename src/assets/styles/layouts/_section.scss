@@ -1,0 +1,15 @@
+@use "../variables";
+
+@layer layout {
+  .section-title {
+    padding-top: 2.5rem;
+    font-size: 2.5rem;
+    font-weight: variables.$bold-weight;
+  }
+
+  .section-description {
+    margin: 0 10% 2rem;
+    color: variables.$third-color;
+    font-size: 1.25rem;
+  }
+}

@@ -1,0 +1,75 @@
+@use "../variables";
+
+.hero-section {
+  height: 100vh;
+  padding: 4rem 2rem;
+  background: url("../images/cyber-bg.webp") center/cover no-repeat, linear-gradient(135deg, variables.$hero-color, variables.$hero-color);
+}
+
+/* Compatibilidad con navegadores sin soporte para Grid */
+@supports not (display: grid) {
+  .hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero-content {
+    max-width: 80%;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+/* Hero Section - Si soporta CSS Grid */
+@supports (display: grid) {
+  .hero-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    place-items: center;
+  }
+}
+
+.hero-content {
+  max-width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: variables.$bold-weight;
+}
+
+.venue,
+.subtitle {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+
+.btn-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+.btn-register {
+  border: none;
+  background-color: variables.$second-color;
+  color: variables.$primary-color;
+  text-decoration: none;
+}
+
+.btn-learn-more {
+  border: 1px solid variables.$second-color;
+  background-color: transparent;
+  color: variables.$second-color;
+  text-decoration: none;
+}

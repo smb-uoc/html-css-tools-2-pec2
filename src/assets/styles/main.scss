@@ -8,7 +8,6 @@
  */
 
 @import "variables";
-@import "customs";
 
 /**
  * Import npm dependencies
@@ -24,19 +23,17 @@
  * It's a best practice to use a different partial for each page
  */
 
+/* establish a layer order up-front, from structure to aesthetics */
+@layer base, layout, module, state, theme;
+
 @import "base/base";
 
-@import "layouts/footer";
-@import "layouts/header";
-@import "layouts/main";
+@import "layouts/section";
 
-@import "modules/logo";
-@import "modules/card";
+@import "modules/hero";
+@import "modules/highlight";
 
 @import "states/hover-states";
-
-@import "themes/theme-light";
-@import "themes/theme-dark";
 
 /**
  * Do NOT include anything else in this file!

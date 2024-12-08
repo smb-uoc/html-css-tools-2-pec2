@@ -10,12 +10,14 @@ import VanillaTilt from 'vanilla-tilt';
  * Write any other JavaScript below
  */
 
-const themeToggleButton = document.getElementById("theme-toggle");
-const body = document.body;
+document.addEventListener('DOMContentLoaded', function () {
+  const currentLocation = window.location.pathname;
+  const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
 
-function toggleTheme() {
-  body.classList.toggle("theme-light");
-  body.classList.toggle("theme-dark");
-}
-
-themeToggleButton.addEventListener("click", toggleTheme);
+  navLinks.forEach(link => {
+    if (currentLocation.includes(link.getAttribute('href'))) {
+      link.classList.add('active');
+      link.setAttribute('aria-current', 'page');
+    }
+  });
+});

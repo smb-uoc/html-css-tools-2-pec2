@@ -1,14 +1,19 @@
-a:hover {
-  color: $hover-color;
-  font-weight: $font-bold;
-}
+@use "../variables";
 
-footer img:hover {
-  opacity: .5;
-}
+@layer state {
+  footer img:hover {
+    opacity: .5;
+  }
 
-.navigation li:hover {
-  border-radius: 3px;
-  background-color: $color-grey;
-}
+  a:hover {
+    color: variables.$primary-color;
+    font-weight: variables.$bold-weight;
+    text-decoration: none;
+  }
 
+  .highlight:hover {
+    transform: scale(1.15);
+    border: 1px solid variables.$primary-color;
+    color: variables.$primary-color;
+  }
+}
