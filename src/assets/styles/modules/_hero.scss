@@ -1,9 +1,9 @@
 @use "../variables";
 
 .hero-section {
-  height: 100vh;
+  height: 120vh;
   padding: 4rem 2rem;
-  background: url("../images/cyber-bg.webp") center/cover no-repeat, linear-gradient(135deg, variables.$hero-color, variables.$hero-color);
+  background: url("../images/cyber-bg.webp") center/cover no-repeat;
 }
 
 /* Compatibilidad con navegadores sin soporte para Grid */
