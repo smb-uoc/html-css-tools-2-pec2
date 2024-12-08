@@ -1,22 +1,24 @@
 @use "../variables";
 
-.highlight {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  padding: 1.5rem;
-  transition: transform .3s ease;
-  border-radius: 1rem;
-  background-color: variables.$second-color;
-}
+@layer module {
+  .highlight {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    transition: transform .3s ease;
+    border-radius: 1rem;
+    background-color: variables.$second-color;
+  }
 
-.highlight-link {
-  color: var(--bs-body-color);
-  text-decoration: none;
-}
+  .highlight-link {
+    color: var(--bs-body-color);
+    text-decoration: none;
+  }
 
-.activities-list li {
-  color: variables.$primary-color;
-  font-size: 1.25rem;
+  .activities-list li {
+    color: variables.$primary-color;
+    font-size: 1.25rem;
+  }
 }
 
 .venue-image {

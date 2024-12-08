@@ -1,4 +1,5 @@
 @use "../variables";
+@use "../mixins";
 
 .nav-container {
   width: 100%;
@@ -7,19 +8,18 @@
 .nav-link {
   --bs-nav-link-hover-color: color(display-p3 .7569 1 .5294);
   color: variables.$second-color;
+
+  &.active {
+    --bs-navbar-active-color: color(display-p3 .7569 1 .5294);
+  }
 }
 
-.nav-link.active {
-  --bs-navbar-active-color: color(display-p3 .7569 1 .5294);
-}
-
-div:has(.nav-container) ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+div:has(.nav-container) {
+  ul {
+    @include mixins.display-flex(flex, row, space-around);
+  }
 }
 
 .header-nav {
-  font-size: 1.25rem;
-  font-weight: variables.$bold-weight;
+  @include mixins.font(1.25rem, variables.$bold-weight);
 }

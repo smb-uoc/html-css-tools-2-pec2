@@ -1,20 +1,15 @@
 @use "../variables";
+@use "../mixins";
 
 @layer layout {
   .section-title {
     padding-top: 2.5rem;
-    font-size: 2.5rem;
-    font-weight: variables.$bold-weight;
+    @include mixins.font(2.5rem, variables.$bold-weight, variables.$primary-color);
   }
 
   .section-description {
     margin: 0 10% 2rem;
     color: variables.$third-color;
     font-size: 1.25rem;
-  }
-
-  .inscription {
-    padding-top: 2rem;
-    border-top: 1px solid variables.$primary-color;
   }
 }

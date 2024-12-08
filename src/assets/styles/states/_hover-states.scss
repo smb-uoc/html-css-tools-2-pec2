@@ -16,4 +16,8 @@
     border: 1px solid variables.$primary-color;
     color: variables.$primary-color;
   }
+
+  .speaker-card:hover {
+    transform: scale(1.05);
+  }
 }

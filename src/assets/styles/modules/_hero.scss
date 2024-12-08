@@ -1,75 +1,62 @@
 @use "../variables";
+@use "../mixins";
 
-.hero-section {
-  height: 100vh;
-  padding: 4rem 2rem;
-  background: url("../images/cyber-bg.webp") center/cover no-repeat;
-}
-
-/* Compatibilidad con navegadores sin soporte para Grid */
-@supports not (display: grid) {
+@layer module {
   .hero-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    height: 100vh;
+    padding: 4rem 2rem;
+    background: url("../images/cyber-bg.webp") center/cover no-repeat;
+    container-type: inline-size;
+
+    /* Compatibilidad con navegadores sin soporte para Grid */
+    @supports not (display: grid) {
+      @include mixins.display-flex(flex, column, center);
+      align-items: center;
+    }
+
+    /* Hero Section - Si soporta CSS Grid */
+    @supports (display: grid) {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      place-items: center;
+    }
+
+    .hero-content {
+      max-width: 80%;
+      margin: 0 auto;
+      text-align: center;
+
+      /* Compatibilidad con navegadores sin soporte para Grid */
+      @supports not (display: grid) {
+        max-width: 80%;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      @container (min-width: 600px) {
+        padding: 6rem 4rem;
+      }
+
+      @container (min-width: 900px) {
+        padding: 8rem 5rem;
+      }
+
+
+    }
+
+    .btn-container {
+      @include mixins.display-flex(flex, row, center);
+      flex-wrap: wrap;
+      gap: 1rem;
+
+      @container (min-width: 600px) {
+        gap: 1.5rem;
+      }
+
+      @container (min-width: 900px) {
+        gap: 2rem;
+      }
+    }
   }
-  .hero-content {
-    max-width: 80%;
-    margin: 0 auto;
-    text-align: center;
-  }
-}
-
-/* Hero Section - Si soporta CSS Grid */
-@supports (display: grid) {
-  .hero-section {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    place-items: center;
-  }
-}
-
-.hero-content {
-  max-width: 80%;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.title {
-  font-size: 3rem;
-  font-weight: variables.$bold-weight;
-}
-
-.venue,
-.subtitle {
-  margin-top: 1rem;
-  font-size: 1.5rem;
-}
-
-.btn-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.btn {
-  padding: 1rem;
-  font-size: 1rem;
-}
-
-.btn-register {
-  border: none;
-  background-color: variables.$second-color;
-  color: variables.$primary-color;
-  text-decoration: none;
-}
-
-.btn-learn-more {
-  border: 1px solid variables.$second-color;
-  background-color: transparent;
-  color: variables.$second-color;
-  text-decoration: none;
 }
