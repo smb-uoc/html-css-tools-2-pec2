@@ -1,0 +1,89 @@
+@use "../variables";
+
+.blockquote {
+  padding-left: 1.5rem;
+  border-left: 4px solid variables.$primary-color;
+  color: variables.$third-color;
+  font-style: italic;
+}
+
+.blockquote footer {
+  margin-top: 1rem;
+  color: variables.$primary-color;
+  font-size: .9em;
+}
+
+.article-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 60vh;
+  background: url("../images/contest.png") center / cover no-repeat;
+  color: variables.$second-color;
+}
+
+.article-title {
+  font-size: 1.25rem;
+  font-weight: variables.$bold-weight;
+}
+
+.article-image p {
+  color: variables.$fourth-color;
+  font-weight: variables.$bold-weight;
+}
+
+article:has(.row) .row:first-of-type {
+  padding-bottom: 3rem;
+}
+
+:where(.row) {
+  padding-top: 2rem;
+}
+
+article:has(.row-with-separator) .row-with-separator {
+  border-bottom: 1px solid variables.$primary-color;
+}
+
+.custom-list .list-group-item {
+  position: relative;
+  padding-left: 2.5rem;
+}
+
+.custom-list .list-group-item::before {
+  content: counter(item);
+  position: absolute;
+  top: 15%;
+  left: 0;
+  width: 2rem;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background-color: variables.$primary-color;
+  color: variables.$second-color;
+  font-size: 1.2rem;
+  text-align: center;
+  counter-increment: item;
+}
+
+.custom-list {
+  counter-reset: item; /* Inicializa el contador de la lista */
+}
+
+.list-group-item > :is(strong + p) {
+  padding-top: 1rem;
+}
+
+.list-group-item > :is(strong) {
+  color: variables.$primary-color;
+}
+
+.list-group,
+.list-group-item {
+  border: none;
+  box-shadow: none;
+}
+
+.carousel-item img {
+  height: 70vh;
+  object-fit: cover;
+}
